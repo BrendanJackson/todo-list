@@ -1,0 +1,14 @@
+.category1, .critical, .master_list{
+		height: 500px;
+		width: 200px;
+		border:10px;
+		padding: 10px;
+		margin: 20px;
+		border-style: ridge;
+	}
+
+	.category1{
+		background-color: rgb(200,200,200);	
+		border-color: rgb(100,100,100);
+	}
+
