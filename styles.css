@@ -1,4 +1,10 @@
-.category1, .critical, .master_list{
+
+	
+	h2{
+		text-decoration: underline;
+	}
+	
+	.category1, .critical, .master_list{
 		height: 500px;
 		width: 200px;
 		border:10px;
@@ -10,5 +16,23 @@
 	.category1{
 		background-color: rgb(200,200,200);	
 		border-color: rgb(100,100,100);
+		
+
+	}
+
+	.notes{
+		background-color: lightblue;
+	}
+
+	.critical{
+		background-color: rgb(255,100,100);
+		border-color: rgb(100,0,0);
+		
+	}
+
+	.master_list{
+		background-color: rgb(225,225,225);
+		border-color: rgb(150,150,150);
+			
 	}
 
