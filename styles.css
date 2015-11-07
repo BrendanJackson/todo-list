@@ -4,7 +4,7 @@
 		text-decoration: underline;
 	}
 	
-	.category1, .critical, .master_list{
+	.category1, .critical, .master_list, .important, .future_importance{
 		height: 500px;
 		width: 200px;
 		border:10px;
@@ -30,6 +30,19 @@
 		
 	}
 
+
+	.important{
+		background-color: rgb(255,200,200);
+		border-color: rgb(100,0,0);
+		
+	}.future_importance{
+		background-color: rgb(255,255,255);
+		border-color: rgb(100,0,0);
+		
+	}
+
+
+/*sort by special >> chronological order  keep highlighted by displaying what category they started in and what priority level they're on*/
 	.master_list{
 		background-color: rgb(225,225,225);
 		border-color: rgb(150,150,150);

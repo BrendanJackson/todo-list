@@ -1,21 +1,29 @@
 
 <head>
+
 <link rel="stylesheet" type="text/css" href="styles.css">	
+<script type="text/javascript" src="jquery_library.js"></script>
+<script type="text/javascript" src="jQuery_script.js"></script>
+
+
 </head>
 <body>
 
 	<div class="category1">
 	<h1>Wellness</h1>
-	task:<input type="text" id = "inputtext">
-	date:<input type="text" id = "inputdate">
-	<button onClick='buttonClicked()'>Click Me!</button>
+	Task:<input type="text" id = "input_text">  <!--to search for something it must have a way of being identified-->
+	Date:<input type="text" id = "input_date">	<!--javascript can search for ID's--> 
+	Time:<input type="text" id = "input_time">  <!--I assign an ID to the text, this will let me retrieve it in JS.-->
+    <input type ="button" id = 'buttonClicked'value="Submit!"/>
+    <!-- <button onClick='buttonClicked()'>Submit!</button> -->
 	<ul id="myText"></ul>
 	      
+	      <!-- <input type ="button" id = "sb"value="Create Account"/> -->
 	
 	      </div>
 
 
-	      	<div class="priority"> <!---->
+	<div class="priority"> <!---->
 		
 	<h1>Priority level</h1>
 		
@@ -26,13 +34,32 @@
 				</ul>
 		</div>
 
+	
+		
+		<div class="important"> <!---->
+			
+			<h2>Important</h2>
+			<ul>
+				</ul>
+		</div>
+
+	
+		
+		<div class="future_importance"> <!---->
+			zz
+			<h2>Future Importance</h2>
+			<ul>
+				</ul>
+		</div>		
+
+
+
+
+
+
 	</div>
 
 
     
-
-    <script type="text/javascript" src="javascript.js">
-
-    </script>
 
 </body>
