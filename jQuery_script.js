@@ -8,7 +8,7 @@ $(document).ready(function() {
        input_text = $('#input_text').val();
        input_date = $('#input_date').val();
        input_time = $('#input_time').val();
-       options_menu = '<select id="select"> <option value="critical">Critical</option> <option value="important">Important</option> <option value="future_importance">Future Importance</option> </select> ';
+       options_menu = '<select id="select"> <option value="daily">Daily</option> <option value="critical">Critical</option> <option value="important">Important</option> <option value="future_importance">Future Importance</option> </select> ';
        
       //http://stackoverflow.com/questions/1221957/jquery-to-retrieve-and-set-selected-option-value-of-html-select-element
 

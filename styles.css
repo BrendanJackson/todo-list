@@ -4,7 +4,7 @@
 		text-decoration: underline;
 	}
 	
-	.category1, .critical, .master_list, .important, .future_importance{
+	.category1, .daily, .critical, .master_list, .important, .future_importance{
 		height: 500px;
 		width: 200px;
 		border:10px;
@@ -24,9 +24,17 @@
 		background-color: lightblue;
 	}
 
+	.daily{
+		background-color: rgb(100,100,255);
+		border-color: rgb(0,0,100);
+		background-image: 
+		
+	}
+
 	.critical{
 		background-color: rgb(255,100,100);
 		border-color: rgb(100,0,0);
+		background-image: 
 		
 	}
 
