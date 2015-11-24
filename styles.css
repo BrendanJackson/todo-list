@@ -4,17 +4,17 @@
 		text-decoration: underline;
 	}
 	
-	.category1, .daily, .critical, .master_list, .important, .future_importance{
-		height: 500px;
-		width: 200px;
+	.wellness, .daily, .critical, .master_list, .important, .future_importance{
+		height: 700px;
+		width: 275px;
 		border:10px;
 		padding: 10px;
 		margin: 20px;
 		border-style: ridge;
 	}
 
-	.category1{
-		background-color: rgb(200,200,200);	
+	.wellness{
+		background-color: green;	
 		border-color: rgb(100,100,100);
 		
 
@@ -27,34 +27,39 @@
 	.daily{
 		background-color: rgb(100,100,255);
 		border-color: rgb(0,0,100);
-		background-image: 
+		float: left !important;
 		
 	}
 
 	.critical{
 		background-color: rgb(255,100,100);
 		border-color: rgb(100,0,0);
-		background-image: 
-		
+		 
+		float: left !important;
 	}
 
 
 	.important{
+		background-color: rgb(255,165,165);
+		border-color: rgb(100,0,0);
+		float: left !important;
+    }
+    .future_importance{
 		background-color: rgb(255,200,200);
 		border-color: rgb(100,0,0);
-		
-	}.future_importance{
-		background-color: rgb(255,255,255);
-		border-color: rgb(100,0,0);
-		
+		float: left !important;	
 	}
 
 
 /*sort by special >> chronological order  keep highlighted by displaying what category they started in and what priority level they're on*/
+	#finish{
+		float: left !important;
+	}
+	
 	.master_list{
 		background-color: rgb(225,225,225);
 		border-color: rgb(150,150,150);
-			
+		float: left !important;
 	}
 
 #nav ul{

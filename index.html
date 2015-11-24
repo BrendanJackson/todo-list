@@ -1,11 +1,15 @@
-<!--Brendan Jackson-->
-<!--Priority List-->
-<!--Addition:Daily priority
-			 relearn and make comments on all code especially jQuery!
--->
-<!--Subtraction: What don't I need here?
-                 How could I make this easier to read?
-				
+<!--
+Brendan Jackson
+Priority List
+
+Addition:
+	Daily priority
+    relearn and make comments on all code especially jQuery!
+
+Subtraction: 
+	What don't I need here?
+    How could I make this easier to read?
+	returns only 1st drop down list choice				
 
 
                  -->
@@ -14,6 +18,11 @@
 <head>
 
 <link rel="stylesheet" type="text/css" href="styles.css">	
+<!--bootstrap-->
+<link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
 <script type="text/javascript" src="jquery_library.js"></script>
 <script type="text/javascript" src="jQuery_script.js"></script>
 
@@ -21,73 +30,89 @@
 </head>
 <body>
 
-	<div class="category1">
-	<h1>Wellness</h1>
-	Task:<input type="text" id = "input_text">  <!--to search for something it must have a way of being identified-->
-	Date:<input type="text" id = "input_date">	<!--javascript can search for ID's--> 
-	Time:<input type="text" id = "input_time">  <!--I assign an ID to the text, this will let me retrieve it in JS.-->
-    <input type ="button" id = 'buttonClicked'value="Submit!"/>
-    <!-- <button onClick='buttonClicked()'>Submit!</button> -->
-	<ul id="myText">
-		<input type="submit" name="get" id="get" value="Get selected index" />
+	<div class="start">
+		<h1>Start</h1>
 
-	</ul>
-	      
-	      <!-- <input type ="button" id = "sb"value="Create Account"/> -->
+			<div class="wellness">
+			<h1>Wellness</h1>
+			Task:<input type="text" id = "input_text">  <!--to search for something it must have a way of being identified-->
+			Date:<input type="text" id = "input_date">	<!--javascript can search for ID's--> 
+			Time:<input type="text" id = "input_time">  <!--I assign an ID to the text, this will let me retrieve it in JS.-->
+		    <input type ="button" class="btn btn-success" id = 'buttonClicked'value="Submit!"/>
+		    <!-- <button onClick='buttonClicked()'>Submit!</button> -->
+			<ul id="myText">
+				<input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" />
+
+			</ul>
+			      
+			      <!-- <input type ="button" id = "sb"value="Create Account"/> -->
+			
+			      </div>
+
+    </div>
 	
-	      </div>
-
-
 
     
 
-
+    <!--catch selected index value-->
 	<div class="priority"> <!---->
 		
 	<h1>Priority level</h1>
-		
+		<div class="col-md-3">
 		<div class="daily"> <!---->
 			
-			<h2>daily</h2>
+			<h2>Daily</h2>
 			<ul>
 				</ul>
 		</div>
+		</div>
 
-
+		<div class="col-md-3">
 		<div class="critical"> <!---->
 			
 			<h2>Critical</h2>
 			<ul>
 				</ul>
 		</div>
-
+		</div>
 	
-		
+		<div class="col-md-3">
 		<div class="important"> <!---->
 			
 			<h2>Important</h2>
 			<ul>
 				</ul>
 		</div>
-
+		</div>
 	
-		
+		<div class="col-md-3">
 		<div class="future_importance"> <!---->
 			
 			<h2>Future Importance</h2>
 			<ul>
 				</ul>
 		</div>		
-
-
-
-
+		</div>
 
 
 	</div>
 
-    
+	<div class="col-md-4"></div>
+		<div class="col-md-4">
+			<div id="finish" class="container">
+				<h1>Finish</h1>
+				
+				<div class="master_list">
+					<h2>Master List</h2>
+						<ul>
+						</ul>
+								
+				</div>
 
+		</div>
+	</div>	    
+
+	<div class="col-md-4"></div>
 </body>
 
 
