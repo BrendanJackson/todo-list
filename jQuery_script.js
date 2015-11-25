@@ -8,7 +8,7 @@ $(document).ready(function() {
        input_text = $('#input_text').val();
        input_date = $('#input_date').val();
        input_time = $('#input_time').val();
-       options_menu = '<select class="form-control" id="sel1"> <option value="daily">Daily</option> <option value="critical">Critical</option> <option value="important">Important</option> <option value="future_importance">Future Importance</option> </select>';
+       options_menu = '<select class="form-control" id="select"> <option value="daily">Daily</option> <option value="critical">Critical</option> <option value="important">Important</option> <option value="future_importance">Future Importance</option> </select>';
    
        
       //http://stackoverflow.com/questions/1221957/jquery-to-retrieve-and-set-selected-option-value-of-html-select-element
@@ -17,6 +17,17 @@ $(document).ready(function() {
   
 });
 
+$('#get').click(function() {
+ get = '<input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" />'
+ 
+  //how do I make this send to another list on submit? replace alert.
+  //http://www.theextremewebdesigns.com/blog/jquery-get-selected-index-jquery-get-selected-option-index-2-ways/
+  alert( $("#select option:selected").index() );
+ 
+  
+  });
+
+});
 /*
 //how do I make this send to another list on submit? replace alert.
   //http://www.theextremewebdesigns.com/blog/jquery-get-selected-index-jquery-get-selected-option-index-2-ways/
@@ -31,7 +42,7 @@ $(document).ready(function() {
     });
 */
 
-});
+
 
 
 
