@@ -4,13 +4,20 @@ $(document).ready(function() {
     var input_time = $('#input_time').val();
     var options_menu ;
     var get;
+    var selectedIndex = 0;
+    var daily = 0;
+    var critical = 1;
+    var important = 2;
+    var future_importance = 3;
    $('#buttonClicked').click(function(){
        input_text = $('#input_text').val();
        input_date = $('#input_date').val();
        input_time = $('#input_time').val();
        options_menu = '<select class="form-control" id="select"> <option value="daily">Daily</option> <option value="critical">Critical</option> <option value="important">Important</option> <option value="future_importance">Future Importance</option> </select>';
-   
        
+      
+//console.log("index: " + selectedIndex.index());
+ 
       //http://stackoverflow.com/questions/1221957/jquery-to-retrieve-and-set-selected-option-value-of-html-select-element
 
       $('#myText').append("<li>"+input_text+" "+input_date+" "+input_time+ options_menu+ "</li>");
@@ -19,15 +26,22 @@ $(document).ready(function() {
 
 $('#get').click(function() {
  get = '<input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" />'
- 
+ selectedIndex = $("#select option:selected");
   //how do I make this send to another list on submit? replace alert.
   //http://www.theextremewebdesigns.com/blog/jquery-get-selected-index-jquery-get-selected-option-index-2-ways/
   alert( $("#select option:selected").index() );
+  console.log("index: " + selectedIndex.index());
+  if(selectedIndex.index() == 0){
+//append ul 1st theh access element
  
-  
+    $( "div.daily ul" ).text(input_text) 
+  }
+
   });
 
 });
+
+
 /*
 //how do I make this send to another list on submit? replace alert.
   //http://www.theextremewebdesigns.com/blog/jquery-get-selected-index-jquery-get-selected-option-index-2-ways/
