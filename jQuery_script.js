@@ -4,7 +4,7 @@ $(document).ready(function() {
     var input_time = $('#input_time').val();
     var options_menu ;
     var get;
-    var selectedIndex = 0;
+    var selectedIndex 
     var daily = 0;
     var critical = 1;
     var important = 2;
@@ -31,13 +31,44 @@ $('#get').click(function() {
   //http://www.theextremewebdesigns.com/blog/jquery-get-selected-index-jquery-get-selected-option-index-2-ways/
   alert( $("#select option:selected").index() );
   console.log("index: " + selectedIndex.index());
+ 
+ var get_index = selectedIndex.index()
+
+/*
   if(selectedIndex.index() == 0){
 //append ul 1st theh access element
  
-    $( "div.daily ul" ).text(input_text) 
+    $( "div.daily ul" ).text(input_text)
+
   }
+*/
+
+switch(get_index) {
+
+  case 0:
+  $( "div.daily ul" ).text(input_text)
+  break;
+
+  case 1:
+  $( "div.critical ul" ).text(input_text)
+  break;
+
+  case 2:
+  $( "div.important ul" ).text(input_text)
+  break;
+
+  case 3:
+  $( "div.future_importance ul" ).text(input_text)
+  break;
+
+  default:
+  alert("Error");
+
+
+}
 
   });
+    
 
 });
 
