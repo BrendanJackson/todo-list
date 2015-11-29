@@ -29,7 +29,10 @@ $('#get').click(function() {
  selectedIndex = $("#select option:selected");
   //how do I make this send to another list on submit? replace alert.
   //http://www.theextremewebdesigns.com/blog/jquery-get-selected-index-jquery-get-selected-option-index-2-ways/
-  alert( $("#select option:selected").index() );
+  
+
+  //alert( $("#select option:selected").index() );
+  
   console.log("index: " + selectedIndex.index());
  
  var get_index = selectedIndex.index()
@@ -43,22 +46,29 @@ $('#get').click(function() {
   }
 */
 
+
+
+//switch statement demo
 switch(get_index) {
 
   case 0:
-  $( "div.daily ul" ).text(input_text)
+  $( "div#daily ul" ).text(input_text)
+  $( "div#master_list ul" ).append("<p class='bg-primary'>" +input_text+ "</p>");
   break;
 
   case 1:
-  $( "div.critical ul" ).text(input_text)
+  $( "div#critical ul" ).text(input_text)
+  $( "div#master_list ul" ).append("<p class='bg-danger'>" +input_text+ "</p>");
   break;
 
   case 2:
-  $( "div.important ul" ).text(input_text)
+  $( "div#important ul" ).text(input_text)
+  $( "div#master_list ul" ).append("<p class='bg-warning'>" +input_text+ "</p>");
   break;
 
   case 3:
-  $( "div.future_importance ul" ).text(input_text)
+  $( "div#future_importance ul" ).text(input_text)
+  $( "div#master_list ul" ).append("<p class='bg-info'>" +input_text+ "</p>");
   break;
 
   default:
@@ -73,7 +83,7 @@ switch(get_index) {
 });
 
 
-/*
+/* 
 //how do I make this send to another list on submit? replace alert.
   //http://www.theextremewebdesigns.com/blog/jquery-get-selected-index-jquery-get-selected-option-index-2-ways/
   //similar possibly better http://jsfiddle.net/Nj85e/
