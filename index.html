@@ -30,89 +30,94 @@ Subtraction:
 </head>
 <body>
 
-	<div class="start">
-		<h1>Start</h1>
-
-			<div id="wellness" class="wellness">
-			<h1>Wellness</h1>
-			Task:<input type="text" id = "input_text">  <!--to search for something it must have a way of being identified-->
-			Date:<input type="text" id = "input_date">	<!--javascript can search for ID's--> 
-			Time:<input type="text" id = "input_time">  <!--I assign an ID to the text, this will let me retrieve it in JS.-->
-		    <input type ="button" class="btn btn-success" id = 'buttonClicked'value="Submit!"/>
-		    <!-- <button onClick='buttonClicked()'>Submit!</button> -->
-			<ul id="myText">
-				<input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" />
-
-			</ul>
-			      
-			      <!-- <input type ="button" id = "sb"value="Create Account"/> -->
-			
-			      </div>
-
-    </div>
-	
-
-    
-
-    <!--catch selected index value-->
-	<div class="priority"> <!---->
+	<div id="wrapper">
+   
+		<div id="start" class="container">  <!---->
 		
-	<h1>Priority level</h1>
-		<div class="col-md-3"> <!--This defines grid spacing-->
-		<div id="daily" class="daily"> <!--assign index value of "0"-->
-			
-			<h2>Daily</h2>
-			<ul></ul>
-		</div>
-		</div>
+			<h1><span class="label label-default">Start</span></h1>
 
-		<div class="col-md-3"> <!--This defines grid spacing-->
-		<div id="critical" class="critical"> <!---->
-			
-			<h2>Critical</h2>
-			<ul></ul>
+				<div id="wellness" class="wellness">
+				<h1><span class="label label-default">Wellness</span></h1>
+				Task:<input type="text" id = "input_text">  <!--to search for something it must have a way of being identified-->
+				Date:<input type="text" id = "input_date">	<!--javascript can search for ID's--> 
+				Time:<input type="text" id = "input_time">  <!--I assign an ID to the text, this will let me retrieve it in JS.-->
+			    <input type ="button" class="btn btn-success" id = 'buttonClicked'value="Submit!"/>
+			    <!-- <button onClick='buttonClicked()'>Submit!</button> -->
+				<ul id="myText">
+					<input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" />
+
+				</ul>
+				      
+				      <!-- <input type ="button" id = "sb"value="Create Account"/> -->
 				
-		</div>
-		</div>
-	
-		<div class="col-md-3"> <!--This defines grid spacing-->
-		<div id="important" class="important"> <!---->
+				      </div>
+
+	    </div>
+		
+
+	    
+
+	    <!--catch selected index value-->
+		<div id="priority" class="container">  <!---->
+
 			
-			<h2>Important</h2>
-			<ul></ul>
+		<h1><span class="label label-default">Priority level</span></h1>
+			<div class="col-md-3"> <!--This defines grid spacing-->
+			<div id="daily" class="daily"> <!--assign index value of "0"-->
 				
-		</div>
-		</div>
-	
-		<div class="col-md-3"> <!--This defines grid spacing-->
-		<div id="future_importance" class="future_importance"> <!---->
-			
-			<h2>Future Importance</h2>
-			<ul></ul>
-				
-		</div>		
-		</div>
-
-
-	</div>
-
-	<div class="col-md-4"></div> <!--This defines grid spacing-->
-
-		<div class="col-md-4"> <!--This defines grid spacing-->
-			<div id="finish" class="container">
-				<h1>Finish</h1>
-				
-				<div id="master_list"class="master_list">
-					<h2>Master List</h2>
-						<ul></ul>
-						
-								
-				</div>
-
+				<h2><span class="label label-default">Daily</span></h2>
+				<ul></ul>
 			</div>
-		</div>	    
+			</div>
 
-	<div class="col-md-4"></div> <!--This defines grid spacing-->
+			<div class="col-md-3"> <!--This defines grid spacing-->
+			<div id="critical" class="critical"> <!---->
+				
+				<h2><span class="label label-default">Critical</span></h2>
+				<ul></ul>
+					
+			</div>
+			</div>
+		
+			<div class="col-md-3"> <!--This defines grid spacing-->
+			<div id="important" class="important"> <!---->
+				
+				<h2><span class="label label-default">Important</span></h2>
+				<ul></ul>
+					
+			</div>
+			</div>
+		
+			<div class="col-md-3"> <!--This defines grid spacing-->
+			<div id="future_importance" class="future_importance"> <!---->
+				
+				<h2><span class="label label-default">Future Importance</span></h2>
+				<ul></ul>
+					
+			</div>		
+			</div>
+
+
+		</div>
+
+		<div class="col-md-4"></div> <!--This defines grid spacing-->
+
+			<div class="col-md-4"> <!--This defines grid spacing-->
+				<div id="finish" class="container">
+					<h1><span class="label label-default">Finish</span></h1>
+					
+					<div id="master_list"class="master_list">
+						<h2><span class="label label-default">Master List</span></h2>
+							<ul></ul>
+							
+									
+					</div>
+
+				</div>
+			</div>	    
+
+		<div class="col-md-4"></div> <!--This defines grid spacing-->
+	</div>
 </body>
 
 

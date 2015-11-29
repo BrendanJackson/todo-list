@@ -2,6 +2,7 @@ $(document).ready(function() {
     var input_text = $('#input_text').val();   
     var input_date = $('#input_date').val();
     var input_time = $('#input_time').val();
+    var get_all_input = input_text, input_date, input_time;
     var options_menu ;
     var get;
     var selectedIndex 
@@ -20,7 +21,7 @@ $(document).ready(function() {
  
       //http://stackoverflow.com/questions/1221957/jquery-to-retrieve-and-set-selected-option-value-of-html-select-element
 
-      $('#myText').append("<li>"+input_text+" "+input_date+" "+input_time+ options_menu+ "</li>");
+      $('#myText').append("<ul>" + "<li>"+input_text+" "+input_date+" "+input_time+ options_menu+ "</li>" + "</ul>");
   
 });
 
@@ -50,25 +51,25 @@ $('#get').click(function() {
 
 //switch statement demo
 switch(get_index) {
-
+//the append allows a new <p> to join with color class, this is a lot mor desirable for the master list, lets you know where data has come from.
   case 0:
-  $( "div#daily ul" ).text(input_text)
-  $( "div#master_list ul" ).append("<p class='bg-primary'>" +input_text+ "</p>");
+  $( "div#daily ul" ).text(input_text +" "+ input_date +" "+ input_time)
+  $( "div#master_list ul" ).append("<p class='bg-primary'>" +input_text +" "+ input_date +" "+ input_time+ "</p>"); 
   break;
 
   case 1:
-  $( "div#critical ul" ).text(input_text)
-  $( "div#master_list ul" ).append("<p class='bg-danger'>" +input_text+ "</p>");
+  $( "div#critical ul" ).text(input_text +" "+ input_date +" "+ input_time)
+  $( "div#master_list ul" ).append("<p class='bg-danger'>"  +input_text +" "+ input_date +" "+ input_time+ "</p>");
   break;
 
   case 2:
-  $( "div#important ul" ).text(input_text)
-  $( "div#master_list ul" ).append("<p class='bg-warning'>" +input_text+ "</p>");
+  $( "div#important ul" ).text(input_text +" "+ input_date +" "+ input_time)
+  $( "div#master_list ul" ).append("<p class='bg-warning'>" +input_text +" "+ input_date +" "+ input_time+ "</p>");
   break;
 
   case 3:
-  $( "div#future_importance ul" ).text(input_text)
-  $( "div#master_list ul" ).append("<p class='bg-info'>" +input_text+ "</p>");
+  $( "div#future_importance ul" ).text(input_text +" "+ input_date +" "+ input_time)
+  $( "div#master_list ul" ).append("<p class='bg-info'>"  +input_text +" "+ input_date +" "+ input_time+ "</p>");
   break;
 
   default:
