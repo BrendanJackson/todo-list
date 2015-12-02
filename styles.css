@@ -1,7 +1,32 @@
 
 	
+/*atlernative method: https://css-tricks.com/perfect-full-page-background-image/
 
-	body{
+HTML
+<div id="bg">
+  <img src="images/bg.jpg" alt="">
+</div>
+CSS
+#bg {
+  position: fixed; 
+  top: -50%; 
+  left: -50%; 
+  width: 200%; 
+  height: 200%;
+}
+#bg img {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  bottom: 0; 
+  margin: auto; 
+  min-width: 50%;
+  min-height: 50%;
+}
+
+*/
+	body{ 
 		background: url('pictures/4198785846781.jpg') no-repeat center center fixed ;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
