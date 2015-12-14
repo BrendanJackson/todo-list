@@ -1,8 +1,11 @@
 $(document).ready(function() {
+   
+/*1st use at submit button*/
     var input_text = $('#input_text').val();   
     var input_date = $('#input_date').val();
     var input_time = $('#input_time').val();
-    var get_all_input = input_text, input_date, input_time;
+    var user_input = input_text, input_date, input_time;
+    
     var options_menu ;
     var get;
     var selectedIndex 
@@ -10,18 +13,17 @@ $(document).ready(function() {
     var critical = 1;
     var important = 2;
     var future_importance = 3;
-   $('#buttonClicked').click(function(){
+    $( '#calClockInDatePicker_peers' ).datepicker();
+/*when I hit the submit button this happens...*/
+   $('#submit_button').click(function(){
        input_text = $('#input_text').val();
        input_date = $('#input_date').val();
-       input_time = $('#input_time').val();
+       input_time = $('#input_time').val(); /*I get the 3 user input values*/
        options_menu = '<select class="form-control" id="select"> <option value="daily">Daily</option> <option value="critical">Critical</option> <option value="important">Important</option> <option value="future_importance">Future Importance</option> </select>';
-       
-      
-//console.log("index: " + selectedIndex.index());
+      $('#myText').append("<ul>" + "<li>"+input_text+" "+input_date+" "+input_time+ options_menu+ "</li>" + "</ul>");
  
       //http://stackoverflow.com/questions/1221957/jquery-to-retrieve-and-set-selected-option-value-of-html-select-element
 
-      $('#myText').append("<ul>" + "<li>"+input_text+" "+input_date+" "+input_time+ options_menu+ "</li>" + "</ul>");
   
 });
 
@@ -112,7 +114,7 @@ switch(get_index) {
    	
     
   /* try this instead
-   $("#buttonClicked").on("click", function(e){
+   $("#submit_button").on("click", function(e){
     e.preventDefault(); //this, along with return false, will prevent default behavior from button clicks - probably only useful in web applications, but a good convention to start using
     $('#myText').append("<li>"+input_text+" "+input_date+" "+input_time+"</li>"); // Note that this will continue to append additional li elements with each button click.  If that is not desired, you can call $("#myText").empty(); before adding the li element
     return false;

@@ -23,7 +23,11 @@ Subtraction:
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <!--jQuery Library-->
-<script type="text/javascript" src="jquery_library.js"></script>
+<!-- <script type="text/javascript" src="jquery_library.js"></script> -->
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<!--jQueryUI-->
+<script src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
 <script type="text/javascript" src="jQuery_script.js"></script>
 
 
@@ -38,13 +42,14 @@ Subtraction:
 
 				<div id="wellness" class="wellness">
 				<h1><span class="label label-default">Wellness</span></h1>
-				Task:<input type="text" id = "input_text">  <!--to search for something it must have a way of being identified-->
-				Date:<input type="text" id = "input_date">	<!--javascript can search for ID's--> 
-				Time:<input type="text" id = "input_time">  <!--I assign an ID to the text, this will let me retrieve it in JS.-->
-			    <input type ="button" class="btn btn-success" id = 'buttonClicked'value="Submit!"/>
-			    <!-- <button onClick='buttonClicked()'>Submit!</button> -->
-				<ul id="myText">
+				Task:<input type="text" id = "input_text">  
+				Date:<input type="text" id = "input_date">	 
+				Time:<input type="text" id = "input_time">  
+				<input type="text" id="calClockInDatePicker_peers"/>
+			    <input type ="button" class="btn btn-success" id = 'submit_button'value="Submit!"/>
+			    <!-- <button onClick='buttonClicked()'>Submit!</button> old button-->
 					<input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" />
+				<ul id="myText">
 
 				</ul>
 				      
@@ -117,8 +122,8 @@ Subtraction:
 			</div>	    
 
 		<div class="col-md-4"></div> <!--This defines grid spacing-->
-	
-</body>
+
+	 </body>
 
 
 
