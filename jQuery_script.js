@@ -13,7 +13,9 @@ $(document).ready(function() {
     var critical = 1;
     var important = 2;
     var future_importance = 3;
-    $( '#calClockInDatePicker_peers' ).datepicker();
+    
+
+
 /*when I hit the submit button this happens...*/
    $('#submit_button').click(function(){
        input_text = $('#input_text').val();
