@@ -4,8 +4,8 @@ $(document).ready(function() {
     var input_text = $('#input_text').val();   
     var input_date = $('#input_date').val();
     var input_time = $('#input_time').val();
-    var user_input = input_text, input_date, input_time;
-    
+    var datetimepicker1 = $('#datetimepicker1').val();
+
     var options_menu ;
     var get;
     var selectedIndex 
@@ -20,9 +20,11 @@ $(document).ready(function() {
    $('#submit_button').click(function(){
        input_text = $('#input_text').val();
        input_date = $('#input_date').val();
-       input_time = $('#input_time').val(); /*I get the 3 user input values*/
-       options_menu = '<select class="form-control" id="select"> <option value="daily">Daily</option> <option value="critical">Critical</option> <option value="important">Important</option> <option value="future_importance">Future Importance</option> </select>';
-      $('#myText').append("<ul>" + "<li>"+input_text+" "+input_date+" "+input_time+ options_menu+ "</li>" + "</ul>");
+       input_time = $('#input_time').val(); 
+      /*I get the 3 user input values*/
+       datetimepicker1 = $('#datetimepicker1').val() 
+     //  options_menu = '<select class="form-control" id="select"> <option value="daily">Daily</option> <option value="critical">Critical</option> <option value="important">Important</option> <option value="future_importance">Future Importance</option> </select>';
+      $('#myText').append("<ul>" + "<li>"+input_text+" "+datetimepicker1+" "+input_date+" "+input_time+ options_menu+ "</li>" + "</ul>");
  
       //http://stackoverflow.com/questions/1221957/jquery-to-retrieve-and-set-selected-option-value-of-html-select-element
 
@@ -57,23 +59,23 @@ $('#get').click(function() {
 switch(get_index) {
 //the append allows a new <p> to join with color class, this is a lot mor desirable for the master list, lets you know where data has come from.
   case 0:
-  $( "div#daily ul" ).append("<p class='lead'>" +input_text +" "+ input_date +" "+ input_time+ "</p>");//.text(input_text +" "+ input_date +" "+ input_time)
-  $( "div#master_list ul" ).append("<p class='bg-primary'>" +input_text +" "+ input_date +" "+ input_time+ "</p>"); 
+  $( "div#daily ul" ).append("<p class='lead'>" +input_text +" "+datetimepicker1+ "</p>");//.text(input_text +" "+ input_date +" "+ input_time)
+  $( "div#master_list ul" ).append("<p class='bg-primary'>" +input_text +" "+ datetimepicker1+ "</p>"); 
   break;
 
   case 1:
-  $( "div#critical ul" ).append("<p class='lead'>"  +input_text +" "+ input_date +" "+ input_time+ "</p>");//.text(input_text +" "+ input_date +" "+ input_time)
-  $( "div#master_list ul" ).append("<p class='bg-danger'>"  +input_text +" "+ input_date +" "+ input_time+ "</p>");
+  $( "div#critical ul" ).append("<p class='lead'>"  +input_text +" "+datetimepicker1+ "</p>");//.text(input_text +" "+ input_date +" "+ input_time)
+  $( "div#master_list ul" ).append("<p class='bg-danger'>"  +input_text +" "+ datetimepicker1+ "</p>");
   break;
 
   case 2:
   $( "div#important ul" ).append("<p class='lead'>" +input_text +" "+ input_date +" "+ input_time+ "</p>");//.text(input_text +" "+ input_date +" "+ input_time)
-  $( "div#master_list ul" ).append("<p class='bg-warning'>" +input_text +" "+ input_date +" "+ input_time+ "</p>");
+  $( "div#master_list ul" ).append("<p class='bg-warning'>" +input_text +" "+datetimepicker1+ "</p>");
   break;
 
   case 3:
-  $( "div#future_importance ul" ).append("<p class='lead'>"  +input_text +" "+ input_date +" "+ input_time+ "</p>");//.text(input_text +" "+ input_date +" "+ input_time)
-  $( "div#master_list ul" ).append("<p class='bg-info'>"  +input_text +" "+ input_date +" "+ input_time+ "</p>");
+  $( "div#future_importance ul" ).append("<p class='lead'>"  +input_text +" "+ datetimepicker1+ "</p>");//.text(input_text +" "+ input_date +" "+ input_time)
+  $( "div#master_list ul" ).append("<p class='bg-info'>"  +input_text +" "+ datetimepicker1+ "</p>");
   break;
 
   default:

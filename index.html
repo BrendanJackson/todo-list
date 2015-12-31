@@ -45,24 +45,18 @@ Subtraction:
 
 		
    
-		<div id="start" class="container">  <!---->
+	<div id="start" class="container">  <!---->
 		
-			<h1><span class="label label-default">Start</span></h1>
-
-				<div id="wellness" class="wellness">
-				<h1><span class="label label-default">Wellness</span></h1>
-				Task:<input type="text" id = "input_text">  
-				Date:<input type="text" id = "input_date">	 
-				Time:<input type="text" id = "input_time">  
-			
-<!--http://stackoverflow.com/questions/22846525/bootstrap-datetimepicker-not-working-->
-			<div class="container">
-    <div class="row">
-        <div class='col-sm-6'>
-            <div class="form-group">
-                <div class='input-group date' id='datetimepicker1'>
-                    <input type='text' class="form-control" />
-                    <span class="input-group-addon">
+		<h1><span class="label label-default">Start</span></h1>
+						Task:<input type="text" class= "form-control" id = "input_text">  
+				Deadline:<!--http://stackoverflow.com/questions/22846525/bootstrap-datetimepicker-not-working-->
+				<div class="container"> 
+     				<div class="row"> 
+        <div class='col-sm-3'> 
+            <div class="form-group"> 
+              <div class='input-group date' > <!--id='datetimepicker1'--> 
+                    <input type='text' class="form-control" id='datetimepicker1' />
+                    <span class="input-group-addon"> 
                         <span class="glyphicon glyphicon-calendar"></span>
                     </span>
                 </div>
@@ -71,15 +65,50 @@ Subtraction:
         <script type="text/javascript">
             $(function () {
                 $('#datetimepicker1').datetimepicker();
+                	$('#datetimepicker1').val()
             });
         </script>
     </div>
 </div>
 
+<!--
+<input type="text" class="form-control fromdate" id="datepicker" name="from_date" />
+
+<script>
+$(document).ready(function(){
+    $('.fromdate').datepicker({
+    dateFormat: 'yy-m-d',
+    inline: true,
+    onSelect: function(dateText, inst) { 
+        var date = $(this).datepicker('getDate'),
+            day  = date.getDate(),  
+            month = date.getMonth() + 1,              
+            year =  date.getFullYear();
+        alert(day + '-' + month + '-' + year);
+    }
+});
+
+var fromdate =  $('.fromdate').datepicker('getDate');
+alert(fromdate);
+
+}); 
+</script> -->
+			<!--	<input type="text" id = "input_date"> -->	 
+			<!-- Time:<input type="text" id = "input_time"> -->  
+			
+`
+
 			    <input type ="button" class="btn btn-success" id = 'submit_button'value="Submit!"/>
 			    <!-- <button onClick='buttonClicked()'>Submit!</button> old button-->
 					<input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" />
 				
+		
+	
+	</div>	
+	
+
+			<div id="wellness" class="wellness">
+				<h1><span class="label label-default">Wellness</span></h1>
 
 
 
