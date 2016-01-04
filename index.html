@@ -48,28 +48,33 @@ Subtraction:
 	<div id="start" class="container">  <!---->
 		
 		<h1><span class="label label-default">Start</span></h1>
-						Task:<input type="text" class= "form-control" id = "input_text">  
+			
+			<div class="col-xs-4">
+				Task:<input type="text" class= "form-control" id = "input_text">  
+			</div>
+
+
 				Deadline:<!--http://stackoverflow.com/questions/22846525/bootstrap-datetimepicker-not-working-->
 				<div class="container"> 
      				<div class="row"> 
-        <div class='col-sm-3'> 
-            <div class="form-group"> 
-              <div class='input-group date' > <!--id='datetimepicker1'--> 
+        			<div class='col-sm-3'> 
+            		<div class="form-group"> 
+              		<div class='input-group date' > <!--id='datetimepicker1'--> 
                     <input type='text' class="form-control" id='datetimepicker1' />
                     <span class="input-group-addon"> 
-                        <span class="glyphicon glyphicon-calendar"></span>
+                    <span class="glyphicon glyphicon-calendar"></span>
                     </span>
-                </div>
-            </div>
-        </div>
+               		</div>
+            		</div>
+        			</div>
         <script type="text/javascript">
             $(function () {
                 $('#datetimepicker1').datetimepicker();
                 	$('#datetimepicker1').val()
             });
         </script>
-    </div>
-</div>
+    				</div>
+					</div>
 
 <!--
 <input type="text" class="form-control fromdate" id="datepicker" name="from_date" />
@@ -95,14 +100,17 @@ alert(fromdate);
 </script> -->
 			<!--	<input type="text" id = "input_date"> -->	 
 			<!-- Time:<input type="text" id = "input_time"> -->  
-			
-`
+			<div class="col-xs-4">
+				Send to:
+				<select class="form-control" id="category"> <option value="wellness">Wellness</option> <option value="family">Family</option> <option value="career">Career</option> <option value="finance">Finance
+				</option> </select>
+			</div>
 
 			    <input type ="button" class="btn btn-success" id = 'submit_button'value="Submit!"/>
 			    <!-- <button onClick='buttonClicked()'>Submit!</button> old button-->
-					<input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" />
+					<!-- <input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" /> -->
 				
-		
+
 	
 	</div>	
 	

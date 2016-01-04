@@ -23,9 +23,10 @@ $(document).ready(function() {
        input_time = $('#input_time').val(); 
       /*I get the 3 user input values*/
        datetimepicker1 = $('#datetimepicker1').val() 
-     //  options_menu = '<select class="form-control" id="select"> <option value="daily">Daily</option> <option value="critical">Critical</option> <option value="important">Important</option> <option value="future_importance">Future Importance</option> </select>';
-      $('#myText').append("<ul>" + "<li>"+input_text+" "+datetimepicker1+" "+input_date+" "+input_time+ options_menu+ "</li>" + "</ul>");
- 
+       options_menu = '<select class="form-control" id="select"> <option value="daily">Daily</option> <option value="critical">Critical</option> <option value="important">Important</option> <option value="future_importance">Future Importance</option> </select>';
+       index_item = '<input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" />'
+      $('#myText').append("<ul>" + "<li>" +input_text+ " " +datetimepicker1+ " " +options_menu+ "" +index_item+ "</li>" + "</ul>");
+          $('select').hide;
       //http://stackoverflow.com/questions/1221957/jquery-to-retrieve-and-set-selected-option-value-of-html-select-element
 
   
@@ -33,25 +34,13 @@ $(document).ready(function() {
 
 $('#get').click(function() {
  get = '<input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" />'
- selectedIndex = $("#select option:selected");
+ selectedIndex = $("#get option:selected");
   //how do I make this send to another list on submit? replace alert.
   //http://www.theextremewebdesigns.com/blog/jquery-get-selected-index-jquery-get-selected-option-index-2-ways/
-  
-
-  //alert( $("#select option:selected").index() );
   
   console.log("index: " + selectedIndex.index());
  
  var get_index = selectedIndex.index()
-
-/*
-  if(selectedIndex.index() == 0){
-//append ul 1st theh access element
- 
-    $( "div.daily ul" ).text(input_text)
-
-  }
-*/
 
 
 
