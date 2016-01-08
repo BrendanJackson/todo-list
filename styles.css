@@ -33,7 +33,7 @@ CSS
 		-o-background-size: cover;
 		background-size: cover;}
 
-	#wellness, #daily, #critical, #master_list, #important, #future_importance{
+	#wellness, #family, #career, #finance, #daily, #critical, #master_list, #important, #future_importance{
 		height: 700px;
 		width: 275px;
 		border:10px;
@@ -63,8 +63,24 @@ CSS
 		background-color: green;	
 		border-color: rgb(100,100,100);
 		
+   	}
+     
+   	#family{
+   		background-color: green;	
+		border-color: rgb(100,100,100);
+   	}
 
-	}
+   	#career{
+   		background-color: green;	
+		border-color: rgb(100,100,100);
+   	}
+   	#finance{
+   		background-color: green;	
+		border-color: rgb(100,100,100);
+   	}
+
+
+
 
 	#notes{
 		background-color: lightblue;

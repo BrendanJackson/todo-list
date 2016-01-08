@@ -19,26 +19,50 @@ $(document).ready(function() {
 /*when I hit the submit button this happens...*/
    $('#submit_button').click(function(){
        input_text = $('#input_text').val();
-       input_date = $('#input_date').val();
-       input_time = $('#input_time').val(); 
-      /*I get the 3 user input values*/
        datetimepicker1 = $('#datetimepicker1').val() 
-       options_menu = '<select class="form-control" id="select"> <option value="daily">Daily</option> <option value="critical">Critical</option> <option value="important">Important</option> <option value="future_importance">Future Importance</option> </select>';
+       options_menu = '<select class="form-control" id="options_menu"> <option value="daily">Daily</option> <option value="critical">Critical</option> <option value="important">Important</option> <option value="future_importance">Future Importance</option> </select>';
        index_item = '<input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" />'
-      $('#myText').append("<ul>" + "<li>" +input_text+ " " +datetimepicker1+ " " +options_menu+ "" +index_item+ "</li>" + "</ul>");
-          $('select').hide;
+     
+      
+       send_to = $("#send_to option:selected");
+       console.log("index: " + send_to.index() );
+     // $('#myText').append("<ul>" + "<li>" +input_text+ " " +datetimepicker1+ " " +options_menu+ "" +index_item+ "</li>" + "</ul>");
+          
       //http://stackoverflow.com/questions/1221957/jquery-to-retrieve-and-set-selected-option-value-of-html-select-element
 
+var send_index = send_to.index()
   
+switch(send_index){
+
+  case 0:
+  //$("div#wellness ul").append("<li class=lead" +input_text+ " " +datetimepicker1+ " " +options_menu+ "" +index_item+ "</li>");
+  $('#my_text0').append("<ul>" + "<li>" +input_text+ " " +datetimepicker1+ " " +options_menu+ "" +index_item+ "</li>" + "</ul>");
+  break;
+  
+  case 1:
+  $('#my_text1').append("<ul>" + "<li>" +input_text+ " " +datetimepicker1+ " " +options_menu+ "" +index_item+ "</li>" + "</ul>");
+  break;
+  
+  case 2:
+  $('#my_text2').append("<ul>" + "<li>" +input_text+ " " +datetimepicker1+ " " +options_menu+ "" +index_item+ "</li>" + "</ul>");
+  break;
+  
+  case 3:
+  $('#my_text3').append("<ul>" + "<li>" +input_text+ " " +datetimepicker1+ " " +options_menu+ "" +index_item+ "</li>" + "</ul>");
+  break;
+
+}
+
 });
 
 $('#get').click(function() {
- get = '<input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" />'
+ get = '<input type="submit" class="btn btn-warning" name="get" id="get" value="Get selected index" />';
  selectedIndex = $("#get option:selected");
+
   //how do I make this send to another list on submit? replace alert.
   //http://www.theextremewebdesigns.com/blog/jquery-get-selected-index-jquery-get-selected-option-index-2-ways/
-  
-  console.log("index: " + selectedIndex.index());
+  //$('#options_menu').val()
+  console.log("index: " + selectedIndex.index() );
  
  var get_index = selectedIndex.index()
 
@@ -58,7 +82,7 @@ switch(get_index) {
   break;
 
   case 2:
-  $( "div#important ul" ).append("<p class='lead'>" +input_text +" "+ input_date +" "+ input_time+ "</p>");//.text(input_text +" "+ input_date +" "+ input_time)
+  $( "div#important ul" ).append("<p class='lead'>" +input_text +" "+datetimepicker1+ "</p>");//.text(input_text +" "+ input_date +" "+ input_time)
   $( "div#master_list ul" ).append("<p class='bg-warning'>" +input_text +" "+datetimepicker1+ "</p>");
   break;
 
