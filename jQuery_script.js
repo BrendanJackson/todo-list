@@ -72,23 +72,23 @@ $('#get').click(function() {
 switch(get_index) {
 //the append allows a new <p> to join with color class, this is a lot mor desirable for the master list, lets you know where data has come from.
   case 0:
-  $( "div#daily ul" ).append("<p class='lead'>" +input_text +" "+datetimepicker1+ "</p>");//.text(input_text +" "+ input_date +" "+ input_time)
-  $( "div#master_list ul" ).append("<p class='bg-primary'>" +input_text +" "+ datetimepicker1+ "</p>"); 
+  $( "priority_0" ).append("<ul>" + "<li>" +input_text +" "+datetimepicker1+ "</li>" + "</ul>");//.text(input_text +" "+ input_date +" "+ input_time)
+  $( "master_0" ).append("<ul>" + "<li>" +input_text +" "+ datetimepicker1+ "</li>" + "</ul>"); 
   break;
 
   case 1:
-  $( "div#critical ul" ).append("<p class='lead'>"  +input_text +" "+datetimepicker1+ "</p>");//.text(input_text +" "+ input_date +" "+ input_time)
-  $( "div#master_list ul" ).append("<p class='bg-danger'>"  +input_text +" "+ datetimepicker1+ "</p>");
+  $( "priority_1" ).append("<ul>" + "<li>"  +input_text +" "+datetimepicker1+ "</li>" + "</ul>");//.text(input_text +" "+ input_date +" "+ input_time)
+  $( "master_0" ).append("<ul>" + "<li>"  +input_text +" "+ datetimepicker1+ "</li>" + "</ul>");
   break;
 
   case 2:
-  $( "div#important ul" ).append("<p class='lead'>" +input_text +" "+datetimepicker1+ "</p>");//.text(input_text +" "+ input_date +" "+ input_time)
-  $( "div#master_list ul" ).append("<p class='bg-warning'>" +input_text +" "+datetimepicker1+ "</p>");
+  $( "priority_2" ).append("<ul>" + "<li>" +input_text +" "+datetimepicker1+ "</li>" + "</ul>");//.text(input_text +" "+ input_date +" "+ input_time)
+  $( "master_0" ).append("<ul>" + "<li>" +input_text +" "+datetimepicker1+ "</li>" + "</ul>");
   break;
 
   case 3:
-  $( "div#future_importance ul" ).append("<p class='lead'>"  +input_text +" "+ datetimepicker1+ "</p>");//.text(input_text +" "+ input_date +" "+ input_time)
-  $( "div#master_list ul" ).append("<p class='bg-info'>"  +input_text +" "+ datetimepicker1+ "</p>");
+  $( "priority_3" ).append("<ul>" + "<li>"  +input_text +" "+ datetimepicker1+ "</li>" + "</ul>");//.text(input_text +" "+ input_date +" "+ input_time)
+  $( "master_0" ).append("<ul>" + "<li>"  +input_text +" "+ datetimepicker1+ "</li>" + "</ul>");
   break;
 
   default:

@@ -32,7 +32,6 @@ Subtraction:
 <script src=""></script>
 <script src=""></script>
 <!--jQuery Library-->
-<!-- <script type="text/javascript" src="jquery_library.js"></script> -->
 <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
 <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 <!--jQueryUI-->
@@ -76,30 +75,7 @@ Subtraction:
     				</div>
 					</div>
 
-<!--
-<input type="text" class="form-control fromdate" id="datepicker" name="from_date" />
 
-<script>
-$(document).ready(function(){
-    $('.fromdate').datepicker({
-    dateFormat: 'yy-m-d',
-    inline: true,
-    onSelect: function(dateText, inst) { 
-        var date = $(this).datepicker('getDate'),
-            day  = date.getDate(),  
-            month = date.getMonth() + 1,              
-            year =  date.getFullYear();
-        alert(day + '-' + month + '-' + year);
-    }
-});
-
-var fromdate =  $('.fromdate').datepicker('getDate');
-alert(fromdate);
-
-}); 
-</script> -->
-			<!--	<input type="text" id = "input_date"> -->	 
-			<!-- Time:<input type="text" id = "input_time"> -->  
 			<div class="col-xs-4">
 				Send to:
 				<select class="form-control" id="send_to"> <option value="wellness">Wellness</option> <option value="family">Family</option> <option value="career">Career</option> <option value="finance">Finance
@@ -188,7 +164,7 @@ alert(fromdate);
 			<div id="daily" class="daily"> <!--assign index value of "0"-->
 				
 				<h2><span class="label label-default">Daily</span></h2>
-				<ul></ul>
+				<ul id="priority_0"></ul>
 			</div>
 			</div>
 
@@ -196,7 +172,7 @@ alert(fromdate);
 			<div id="critical" class="critical"> <!---->
 				
 				<h2><span class="label label-default">Critical</span></h2>
-				<ul></ul>
+				<ul id="priority_1"></ul>
 					
 			</div>
 			</div>
@@ -205,7 +181,7 @@ alert(fromdate);
 			<div id="important" class="important"> <!---->
 				
 				<h2><span class="label label-default">Important</span></h2>
-				<ul></ul>
+				<ul id="priority_2"></ul>
 					
 			</div>
 			</div>
@@ -214,7 +190,7 @@ alert(fromdate);
 			<div id="future_importance" class="future_importance"> <!---->
 				
 				<h2><span class="label label-default">Future Importance</span></h2>
-				<ul></ul>
+				<ul id="priority_3"></ul>
 					
 			</div>		
 			</div>
@@ -230,7 +206,7 @@ alert(fromdate);
 					
 					<div id="master_list"class="master_list">
 						<h2><span class="label label-default">Master List</span></h2>
-							<ul></ul>
+							<ul id="master_0"></ul>
 							
 									
 					</div>
