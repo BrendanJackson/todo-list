@@ -26,14 +26,43 @@ CSS
 }
 
 */
+
+
 	body{ 
 		background: url('pictures/4198785846781.jpg') no-repeat center center fixed ;
 		-webkit-background-size: cover;
 		-moz-background-size: cover;
 		-o-background-size: cover;
-		background-size: cover;}
+		background-size: cover;
+		position: absolute;
+	}
 
-	#wellness, #family, #career, #finance, #daily, #critical, #master_list, #important, #future_importance{
+	header{
+		border-style: ridge;
+		border-color: #666;
+		background: #333;
+	}
+
+
+	a{
+		text-align: center;
+		display: block;
+	}
+
+	h1{
+		text-align: center;
+		display: block;
+	}
+
+	
+	.main-nav{
+		
+		display: block;
+		position: relative;
+		content:center;
+	}
+
+	.column{
 		height: 700px;
 		width: 275px;
 		border:10px;
@@ -47,38 +76,43 @@ CSS
 
 	}
 
-	#start{
-		height: 300px;
-		width: 300px
-		border:10px;
-		padding: 10px;
-		margin: 20px;
+	.start{
+		height: 20em;
+		width: 100%;
+		border:1em;
+		padding: 5%;
+		margin: 1em;
 		border-style: ridge;
 		background-color: white;
 		border-color: black;
+		position: relative;
+		
 
 	}
 
-	#wellness{
+	#wellness, .set1_table0{
 		background-color: green;	
 		border-color: rgb(100,100,100);
-		
+		float: left !important;
    	}
      
-   	#family{
+   	#family, .set1_table1{
    		background-color: green;	
 		border-color: rgb(100,100,100);
+   		float: left !important;
    	}
 
-   	#career{
+   	#career, .set1_table2{
    		background-color: green;	
 		border-color: rgb(100,100,100);
-   	}
-   	#finance{
-   		background-color: green;	
-		border-color: rgb(100,100,100);
+   		float: left !important;
    	}
 
+   	#finance, .set1_table3{
+   		background-color: green;	
+		border-color: rgb(100,100,100);
+   		float: left !important;
+   	}
 
 
 
@@ -86,14 +120,14 @@ CSS
 		background-color: lightblue;
 	}
 
-	#daily{
+	#daily, .set2_table0{
 		background-color: #265A88;/*rgb(100,100,255);*/
 		border-color: rgb(0,0,100);
 		float: left !important;
 		
 	}
 
-	#critical{
+	#critical, .set2_table1{
 		background-color: #C12E2A; /*rgb(255,100,100);*/
 		border-color: rgb(100,0,0);
 		 
@@ -101,12 +135,12 @@ CSS
 	}
 
 
-	#important{
+	#important, .set2_table2{
 		background-color: #EB9316 ; /*rgb(255,165,165);*/
 		border-color: rgb(100,0,0);
 		float: left !important;
     }
-    #future_importance{
+    #future_importance, .set2_table3{
 		background-color: #2AABD2; /*rgb(255,200,200);*/
 		border-color: rgb(100,0,0);
 		float: left !important;	
@@ -128,4 +162,11 @@ CSS
   display: none;
 }
 
+
+	footer{
+		display: block;
+		background: #FF0011;
+		width: 90%;
+
+	}
 
