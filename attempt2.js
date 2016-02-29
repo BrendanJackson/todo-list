@@ -67,11 +67,6 @@ $(document).ready(function() {
       /*==========================================
                         variabes
       ===========================================*/
-      
-/* Naming the variable twice before, still havent tested the 'this statements' */
-     /* var set2_yo =    $("li set2_menu option:selected" );
-      set2_index = set2_yo.index()
-     */   
           
       var set2_index = $(this).closest('li').find('select.set2_menu option:selected').index();
           
@@ -87,9 +82,28 @@ $(document).ready(function() {
                         TEST
       =========================================*/
       console.log( "IT WORKS" + " " + set2_index );
-      alert(set2_index);
 
-  //  });
+   switch(set1_index){
+        /*===================  append <li> with no style type  ========================*/
+        case 0:
+        $('.set2_table0').append("<li>" + task + " " /*+ datetimepicker + " "*/  + "</li>" );
+        break;
+
+         case 1:
+        $('.set2_table1').append("<li>" + task + " " /*+ datetimepicker + " "*/  + "</li>" );
+        break;
+
+         case 2:
+        $('.set2_table2').append( "<li>" + task + " "/* + datetimepicker + " "*/ + "</li>" );
+        break;
+
+         case 3:
+        $('.set2_table3').append( "<li>" + task + " "/* + datetimepicker + " "*/ + "</li>" );
+        break;
+    }
+   
+
+
 
   });
 
