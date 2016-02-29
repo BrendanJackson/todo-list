@@ -12,9 +12,7 @@ $(document).ready(function() {
   var set2_menu 
   var set2_index
   var set2_button
- // var get;
- // var selectedIndex;
-
+ 
 
 /*==================================================================================================================
 ==================================================================================================================*/
@@ -62,16 +60,25 @@ $(document).ready(function() {
 /*SET2_BUTTON*/
 /*==================================================================================================================
 ==================================================================================================================*/
-  $("div.set1.row").on("click", "input.set2_button", function(){
+/*http://stackoverflow.com/questions/12065329/jquery-adding-event-listeners-to-dynamically-added-elements*/
+ /*check gibberish's answer*/
+  $(document).on("click", "[class=set2_button]", function()   {  
+  /*$("div.set1.row").on("click", "input.set2_button", function(){*/ 
       /*==========================================
                         variabes
       ===========================================*/
       
+/* Naming the variable twice before, still havent tested the 'this statements' */
+     /* var set2_yo =    $("li set2_menu option:selected" );
+      set2_index = set2_yo.index()
+     */   
+          
+      var set2_index = $(this).closest('li').find('select.set2_menu option:selected').index();
+          
 
-      set2_menu = $("select.set2_menu")
-     /* var to_set2_index = $(this).closest('li').find('select.to_set2 option:selected').index;
-          to_set2 = $()
-      */
+
+
+      
       /*=========================================
                         POST
       =========================================*/
@@ -79,8 +86,8 @@ $(document).ready(function() {
       /*=========================================
                         TEST
       =========================================*/
-      console.log( "IT FUCKING WORKS" + " " + set2_menu.index );
-      
+      console.log( "IT WORKS" + " " + set2_index );
+      alert(set2_index);
 
   //  });
 
@@ -89,23 +96,3 @@ $(document).ready(function() {
 });
 
 
-/*
-  $(document).on("click", '[id^=get-]', function() {
-      var si = $('#options_menu-'+itm+' option:selected');
-  alert('bob');
-      var get_index = si.index();
-      var from_index = $(this).data('from');
-      from_index++; //from_index is zero-based, but Tables are not
-
-      itm++;
-      get = '<input type="submit"  name="get" id="get'+itm+'" value="Get selected index" />';
-      itm--;
-      var final = "<ul>" + "<li>" + input_text + " (from Table " +from_index+ ")" + "</li>" + "</ul>";
-    get_index++;
-    $("#set2_text"+get_index).append(final);
-  
-  }); //END document.on
-
-
-}); //END document.ready
-*/
