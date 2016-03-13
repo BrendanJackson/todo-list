@@ -1,10 +1,10 @@
-
+var itm=0, datetimepicker;
 $(document).ready(function() {
    /*==========================================
                       variabes
     ===========================================*/
   var task 
-  var datetimepicker 
+      datetimepicker 
   
   var set1_menu 
   var set1_index  
@@ -13,7 +13,7 @@ $(document).ready(function() {
   var set2_index
   var set2_button
  
-/*jQuery('#datetimepicker').datetimepicker();*/
+jQuery('#datetimepicker').datetimepicker();
 
 
 /*==================================================================================================================
@@ -32,26 +32,26 @@ $(document).ready(function() {
       task = $("#input_text").val();
      	set1_menu = $(".set1_menu option:selected");
       set1_index = set1_menu.index() //switch arg
-      datetimepicker = $('#datetimepicker').datetimepicker();
+      datetimepicker = $('#datetimepicker').val();
       set2_menu = '<select class="set2_menu"> <option value="set2_table0">set2table0</option> <option value="set2_table1">set2table1</option> <option value="set2_table2">set2table2</option> <option value="set2_table3">set2table3</option> </select>';
-      set2_button = '<input type="button" class="set2_button" data-set1_data="'+set1_index+'" value="set2_button" />'
+      set2_button = '<input type="button" class="set2_button" data-set1_data="'+set1_index+'"  value="set2_button" />'
   	  
       switch(set1_index){
         /*===================  append <li> with no style type  ========================*/
         case 0:
-        $('.set1_table0').append("<li>" + task + " " /*+ datetimepicker + " "*/ + set2_menu + " " + set2_button + "</li>" );
+        $('.set1_table0').append("<li>" + task + " " + datetimepicker + " " + set2_menu + " " + set2_button + "</li>" );
         break;
 
          case 1:
-        $('.set1_table1').append("<li>" + task + " " /*+ datetimepicker + " "*/ + set2_menu + " " + set2_button + "</li>" );
+        $('.set1_table1').append("<li>" + task + " " + datetimepicker + " " + set2_menu + " " + set2_button + "</li>" );
         break;
 
          case 2:
-        $('.set1_table2').append( "<li>" + task + " "/* + datetimepicker + " "*/ + set2_menu + " " + set2_button + "</li>" );
+        $('.set1_table2').append( "<li>" + task + " " + datetimepicker + " " + set2_menu + " " + set2_button + "</li>" );
         break;
 
          case 3:
-        $('.set1_table3').append( "<li>" + task + " "/* + datetimepicker + " "*/ + set2_menu + " " + set2_button + "</li>" );
+        $('.set1_table3').append( "<li>" + task + " " + datetimepicker + " " + set2_menu + " " + set2_button + "</li>" );
         break;
     }
     
@@ -72,7 +72,7 @@ $(document).ready(function() {
           
       var set2_index = $(this).closest('li').find('select.set2_menu option:selected').index();
       var set1_data = $(this).data('set1_data');
-      
+      var set2_data = $(this).data('set2_data');
       /*=========================================
                         POST
       =========================================*/
@@ -85,23 +85,23 @@ $(document).ready(function() {
    switch(set2_index){
         /*===================  append <li> with no style type, consider consolidating append info into a variable  ========================*/
         case 0:
-        $('.set2_table0').append("<li>" + task + " (from Table " +set1_data+ ")" + /*and from set2*/" " /*+ datetimepicker + " "*/  + "</li>" );
-        $('.master').append( "<li>" + task + " (from Table " +set1_data+ ")" /*and from set2*/+ " "/* + datetimepicker + " "*/ + "</li>" );
+        $('.set2_table0').append("<li>" + task + " " + datetimepicker + " (from Table " +set1_data+ "  )" + " " /*+ datetimepicker + " "*/  + "</li>" );
+        $('.master').append( "<li>" + task + " " + datetimepicker + " (from Table " +set1_data+ " and " +set2_data+ ")" + " "/* + datetimepicker + " "*/ + "</li>" );
         break;
 
          case 1:
-        $('.set2_table1').append("<li>" + task + " (from Table " +set1_data+ ")" + /*and from set2*/" " /*+ datetimepicker + " "*/  + "</li>" );
-        $('.master').append( "<li>" + task + " (from Table " +set1_data+ ")" /*and from set2*/+ " "/* + datetimepicker + " "*/ + "</li>" );
+        $('.set2_table1').append("<li>" + task + " " + datetimepicker + " (from Table " +set1_data+ " )" + " " /*+ datetimepicker + " "*/  + "</li>" );
+        $('.master').append( "<li>" + task + " " + datetimepicker + " (from Table " +set1_data+ " and " +set2_data+ ")" + " "/* + datetimepicker + " "*/ + "</li>" );
         break;
 
          case 2:
-        $('.set2_table2').append( "<li>" + task + " (from Table " +set1_data+ ")" + /*and from set2*/" "/* + datetimepicker + " "*/ + "</li>" );
-        $('.master').append( "<li>" + task + " (from Table " +set1_data+ ")" /*and from set2*/+ " "/* + datetimepicker + " "*/ + "</li>" );
+        $('.set2_table2').append( "<li>" + task + " " + datetimepicker +  " (from Table " +set1_data+ " )" + " "/* + datetimepicker + " "*/ + "</li>" );
+        $('.master').append( "<li>" + task + " " + datetimepicker +  " (from Table " +set1_data+ " )" + " "/* + datetimepicker + " "*/ + "</li>" );
         break;
 
          case 3:
-        $('.set2_table3').append( "<li>" + task + " (from Table " +set1_data+ ")" /*and from set2*/ + " "/* + datetimepicker + " "*/ + "</li>" );
-        $('.master').append( "<li>" + task + " (from Table " +set1_data+ ")" /*and from set2*/+ " "/* + datetimepicker + " "*/ + "</li>" );
+        $('.set2_table3').append( "<li>" + task + " " + datetimepicker +  " (from Table " +set1_data+ " )"  + " "/* + datetimepicker + " "*/ + "</li>" );
+        $('.master').append( "<li>" + task + " " + datetimepicker +  " (from Table " +set1_data+ " and " +set2_data+ ")" + " "/* + datetimepicker + " "*/ + "</li>" );
         break;
     }
    
